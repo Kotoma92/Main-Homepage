@@ -17,8 +17,25 @@
             </ul>
         </div>
         <div class="content">
-            <h2 style="text-align: center;">Home</h2>
-            <img style="margin-left:auto;margin-right:auto;display:block;width:50%;" src="img/2RbSTLm.gif"/>
+            <h2 style="text-align:center;">Javascript</h2>
+            <h3 style="font-weight:bold;">Hva står "CPU" for?</h3>
+            <h4 onclick:="doSomething2()">Central Position Unit</h4>
+            <h4 onclick:="doSomething1()">Central Processing Unit</h4>
+            <h4 onclick:="doSomething2()">Control Pointing Unit</h4>
+            <h4 onclick:="doSomething3()">Ceramic Public Urinal</h4>
+            <h4>Svar:</h4><h4 id="svar"></h4>
+
+                <script>
+                function doSomething1() {
+                    document.getElementById("svar").innerHTML = "Riktig Svar!";
+                }
+                function doSomething2() {
+                    document.getElementById("svar").innerHTML = "Feil Svar!";
+                }
+                function doSomething3() {
+                    document.getElementById("svar").innerHTML = "Veldig feil svar :O!";
+                }
+                </script>
         </div>
         <div class="footer">
             <p style="float:left">Made by Kristian Roland</p>

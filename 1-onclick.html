@@ -19,22 +19,22 @@
         <div class="content">
             <h2 style="text-align:center;">Javascript</h2>
             <h3 style="font-weight:bold;">Hva står "CPU" for?</h3>
-            <h4 onclick:="doSomething2()">Central Position Unit</h4>
-            <h4 onclick:="doSomething1()">Central Processing Unit</h4>
-            <h4 onclick:="doSomething2()">Control Pointing Unit</h4>
-            <h4 onclick:="doSomething3()">Ceramic Public Urinal</h4>
-            <h4>Svar:</h4><h4 id="svar"></h4>
+            <h4 onclick="feilSvar()">Central Position Unit</h4>
+            <h4 onclick="riktigSvar()">Central Processing Unit</h4>
+            <h4 onclick="feilSvar()">Control Pointing Unit</h4>
+            <h4 onclick="oida()">Ceramic Public Urinal</h4>
+            <h4>Svar:</h4><h4 id="svar">...</h4>
 
                 <script>
-                function doSomething1() {
-                    document.getElementById("svar").innerHTML = "Riktig Svar!";
+                    function riktigSvar() {
+                        document.getElementById("svar").innerHTML = 'Riktig Svar!';
                 }
-                function doSomething2() {
-                    document.getElementById("svar").innerHTML = "Feil Svar!";
+                    function feilSvar() {
+                        document.getElementById("svar").innerHTML = 'Feil Svar!';
                 }
-                function doSomething3() {
-                    document.getElementById("svar").innerHTML = "Veldig feil svar :O!";
-                }
+                    function oida() {
+                         document.getElementById("svar").innerHTML = 'Veldig feil svar :O!';
+                }  
                 </script>
         </div>
         <div class="footer">

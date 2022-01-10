@@ -1,0 +1,59 @@
+html,
+body {
+    font-family: "Segoe UI";
+    color: white;
+    background-color: black;
+    min-height: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.wrap {
+    display: grid;
+    grid-template-rows: 1fr 18fr 1fr;
+    grid-template-columns: 1fr 6fr;
+    max-height: 100vh;
+}
+
+.header {
+    grid-column: 1/3;
+    grid-row: 1;
+    font-size: 25px;
+    padding: 10px 15px;
+    background-color: rgb(92, 92, 92);
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: rgb(58, 58, 58);
+}
+
+.sidebar ul {
+    padding-left: 10px;
+    list-style: none;
+}
+
+.sidebar a {
+    font-size: 22px;
+}
+
+.sidebar a:hover {
+    color: black;
+}
+
+.footer {
+    grid-column: 1/3;
+    grid-row: 3;
+    background-color: rgb(75, 75, 75);
+    padding: 0 10px 0 10px
+}
+
+.content {
+    grid-column: 2/3;
+    grid-row: 2;
+    background-color: rgb(39, 39, 39);
+}

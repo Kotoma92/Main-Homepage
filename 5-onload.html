@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Main Homepage</title>
+</head>
+<body onload="etterLast()">
+    <div class="wrap">
+        <header class="header">Velkommen til Kristian's nettside!</header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="1-onclick.html">1 - Onclick</a></li>
+                <li><a href="2-eventhandlere.html">2 - Event</a></li>
+                <li><a href="3-this.html">3 - This</a></li>
+                <li><a href="#">5 - Onload</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Onload testing</h2>
+            <p>Under lasting av siden:<div style="margin-left:10px;" id="tidForLast"></div></p>
+            <p>Etter lasting av siden:<div style="margin-left:10px;" id="etterLast"></div></p>
+            <img style="max-width:100%;max-height:100%;" src="img/8kwallpaper.jpg"/>
+            <img style="max-width:100%;max-height:100%;" src="img/8kwallpaper2.jpg"/>
+            <img style="max-width:100%;max-height:100%;" src="img/8kwallpaper3.jpg"/>
+        <script>
+            document.getElementById('tidForLast').innerHTML = '' + new Date().toTimeString();
+        
+            function etterLast(){
+                document.getElementById('etterLast').innerHTML = '' + new Date().toTimeString();
+            }
+        </script>
+        </div>
+        <div class="footer">
+            <p style="float:left">Made by Kristian Roland</p>
+            <p style="float:right">Modul 1</p>
+        </div>
+    </div>
+</body>
+</html>

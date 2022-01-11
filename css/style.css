@@ -61,3 +61,29 @@ a {
 .content h3,h4 {
    margin-left:20px;
 }
+
+#boxdbl {
+    margin: 10px;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+}
+
+#boxcontext {
+    margin: 10px;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
+}
+
+p {
+    margin-left: 10px;
+}
+
+li {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: rgb(94, 95, 128);
+    text-align: center;
+}

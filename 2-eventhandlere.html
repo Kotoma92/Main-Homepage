@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Main Homepage</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">Velkommen til Kristian's nettside!</header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="1-onclick.html">1 - Onclick</a></li>
+                <li><a href="#">2 - Event</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Eventhandlers til Console.log</h2>
+            <p>Dobbelklikk</p>
+            <div id="boxdbl"></div>
+            <p>Kontekstmeny (Høyreklikk)</p>
+            <div id="boxcontext"></div>
+            <p>Key Down</p>
+            <input style="margin-left:10px;" type="text" id="testKey"/>
+            <script>
+
+                //Eventlisteners
+
+                document.getElementById("boxdbl").addEventListener("dblclick", testOnDblClick);
+                document.getElementById("boxcontext").addEventListener("contextmenu", testContextMenu);
+                document.getElementById("testKey").addEventListener("keyup", testKeyDown);
+                document.getElementById("testKey").addEventListener("keydown", keyupFunction);
+
+                //Functions
+
+                function testOnDblClick() {
+                    document.getElementById("boxdbl").style.backgroundColor = "blue";
+                    console.log("testOnDblClick")
+                }
+                function testContextMenu() {
+                    document.getElementById("boxcontext").style.backgroundColor = "blue";
+                    alert("Du klarte det!")
+                    console.log("testContextMenu")
+                }
+                function testKeyDown() {
+                    document.getElementById("testKey").style.backgroundColor = "red";
+                    console.log("testKey")
+                }
+                function keyupFunction() {
+                    document.getElementById("testKey").style.backgroundColor = "blue";
+                    console.log("testKey")
+                }
+
+            </script>    
+        </div>
+        <div class="footer">
+            <p style="float:left">Made by Kristian Roland</p>
+            <p style="float:right">Modul 1</p>
+        </div>
+    </div>
+</body>
+</html>

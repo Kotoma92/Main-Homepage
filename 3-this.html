@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Main Homepage</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">Velkommen til Kristian's nettside!</header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="1-onclick.html">1 - Onclick</a></li>
+                <li><a href="2-eventhandlere.html">2 - Event</a></li>
+                <li><a href="#">3 - This</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Mouseover for This testing</h2>
+            <table style="margin-left:10px;font-size:30px;">
+                <tr>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                </tr>
+        
+                <tr>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                </tr>
+        
+                <tr>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                    <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
+                </tr>
+            </table>
+        
+            <script>
+        
+                function mouseOver(test) {
+                    test.innerHTML = "x";
+                }
+                function mouseOut(test) {
+                    test.innerHTML = "o";
+                }
+            </script>
+        </div>
+        <div class="footer">
+            <p style="float:left">Made by Kristian Roland</p>
+            <p style="float:right">Modul 1</p>
+        </div>
+    </div>
+</body>
+</html>

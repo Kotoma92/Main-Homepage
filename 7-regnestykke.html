@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Main Homepage</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">Velkommen til Kristian's nettside!</header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="1-onclick.html">1 - Onclick</a></li>
+                <li><a href="2-eventhandlere.html">2 - Event</a></li>
+                <li><a href="3-this.html">3 - This</a></li>
+                <li><a href="5-onload.html">5 - Onload</a></li>
+                <li><a href="6-dynamiskhtml.html">6 - Dynamisk HTML</a></li>
+                <li><a href="#">7 - Regnestykke</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Variabel til regnestykke</h2>
+            <input id="tallA" type="range" min="1" max="1000" step="1" oninput="calculate()" value="2" />
+            <input id="tallB" type="range" min="1" max="100" step="1" oninput="calculate()" value="2" />
+            <div style="margin-left:10px" id="resultat"></div>
+            <script>
+                var resultatDiv = document.getElementById('resultat');
+                var tallAInput = document.getElementById('tallA');
+                var tallBInput = document.getElementById('tallB');
+        
+                calculate();
+        
+                function calculate() {
+                    var tallA = parseInt(tallAInput.value);
+                    var tallB = parseInt(tallBInput.value);
+                    var areal = tallA * tallB;
+                    var omkrets = '2' * tallA + '2' * tallB;
+        
+                    resultatDiv.innerHTML = '<div>Areal:</div>' +
+                        tallA + '*' + tallB + '=' + areal + 'cm' + '<br/>'
+                        +  '<div>Omkrets:</div>' + '2' + '*' + tallA + '+' + '2' + '*' + tallB + '=' + omkrets + 'cm' + '<br/>';
+                }
+                </script>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,6 +12,7 @@ body {
     background-color: black;
     min-height: 100%;
     margin: 0;
+    caret-color: transparent;
 }
 
 a {

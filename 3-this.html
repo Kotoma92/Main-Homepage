@@ -19,10 +19,11 @@
                 <li><a href="5-onload.html">5 - Onload</a></li>
                 <li><a href="6-dynamiskhtml.html">6 - Dynamisk HTML</a></li>
                 <li><a href="7-regnestykke.html">7 - Regnestykke</a></li>
+                <li><a href="8-randomvar.html">8 - Random Variabler</a></li>
             </ul>
         </div>
         <div class="content">
-            <h2 style="text-align: center;">Mouseover for This testing</h2>
+            <h2 style="text-align: center;">Mouseover for  testing</h2>
             <table style="margin-left:10px;font-size:30px;">
                 <tr>
                     <td onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">o</td>
@@ -47,9 +48,11 @@
         
                 function mouseOver(test) {
                     test.innerHTML = "x";
+                    console.log(test.innerHTML)
                 }
                 function mouseOut(test) {
                     test.innerHTML = "o";
+                    console.log(test.innerHTML)
                 }
             </script>
         </div>

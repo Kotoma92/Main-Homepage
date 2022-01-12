@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Main Homepage</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">Velkommen til Kristian's nettside!</header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="1-onclick.html">1 - Onclick</a></li>
+                <li><a href="2-eventhandlere.html">2 - Event</a></li>
+                <li><a href="3-this.html">3 - This</a></li>
+                <li><a href="5-onload.html">5 - Onload</a></li>
+                <li><a href="6-dynamiskhtml.html">6 - Dynamisk HTML</a></li>
+                <li><a href="7-regnestykke.html">7 - Regnestykke</a></li>
+                <li><a href="8-randomvar.html">8 - Random Variabler</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 style="text-align: center;">Random variabel til boks</h2>
+            <button style="margin-left:25px;" onClick="window.location.reload();">Refresh Page</button>
+            <div id="resultatHtml"></div>
+            <div id="resultat"></div>
+
+            <script>
+                var resultatDiv = document.getElementById('resultat');
+                var resultatHtmlDiv = document.getElementById('resultatHtml');
+                calculate();
+        
+                function calculate() {
+                    var tallA = 100 + Math.floor(Math.random() * 500);
+                    var tallB = 100 + Math.floor(Math.random() * 500);
+                    var tallC = 5 + Math.floor(Math.random() * 50);
+                    var tallD = 0 + Math.floor(Math.random() * 50);
+        
+                resultatDiv.innerHTML = '<div style="margin-left:20%;'
+                                        + 'width:' + tallA + 'px;' 
+                                        + 'height:' + tallB + 'px;'
+                                        + 'background-color:blue;' 
+                                        + 'border-color:red;'
+                                        + 'border-style:solid;'
+                                        + 'border-width:' + tallC + 'px;'
+                                        + 'border-radius:' + tallD + '%;"'
+                                        + '/>';
+                resultatHtmlDiv.innerText = resultatDiv.innerHTML;                        
+                                       
+                }
+            </script>
+        </div>
+        <div class="footer">
+            <p style="float:left">Made by Kristian Roland</p>
+            <p style="float:right">Modul 1</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Main Homepage</title>
+
+    <style>
+        .borderTggl {
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        .redBg {
+            background-color: red;
+        }
+        .blueTxt {
+            color: blue;
+        }
+        .paddingTggl {
+            padding: 50px;
+        }
+        .marginTggl {
+            margin: 30px;
+        }
+        div.selected::after {
+            content: "🡄";
+        }
+        div.selected::before {
+            content: "🡆";
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">Velkommen til Kristian's nettside!</header>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="1-onclick.html">1 - Onclick</a></li>
+                <li><a href="2-eventhandlere.html">2 - Event</a></li>
+                <li><a href="3-this.html">3 - This</a></li>
+                <li><a href="5-onload.html">5 - Onload</a></li>
+                <li><a href="6-dynamiskhtml.html">6 - Dynamisk HTML</a></li>
+                <li><a href="7-regnestykke.html">7 - Regnestykke</a></li>
+                <li><a href="8-randomvar.html">8 - Random Variabler</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>Ferdighet 8 - Endre andre ting enn innerHTML: value, style</p>
+    <input id="text" type="text"/>
+    <h2 id="overskrift">Overskrift</h2>
+    <button onclick="doSomethingA(this)">A</button>
+    <button onclick="doSomethingB(this)">B</button>
+
+    <script>
+        var textInput = document.getElementById('text');
+        var h2Element = document.getElementById('overskrift');
+
+        function doSomethingA(iqenrgpiouqweprgon) {
+            textInput.style.backgroundColor = 'aquamarine';
+            h2Element.style.backgroundColor = 'aquamarine';
+            iqenrgpiouqweprgon.style.backgroundColor = 'aquamarine';
+
+            textInput.classList.add('borderTggl');
+            h2Element.classList.add('borderTggl');
+            iqenrgpiouqweprgon.classList.add('borderTggl');
+            textInput.value = "Trykket på knapp A";
+        }
+
+        function doSomethingB(iqenrgpiouqweprgon) {
+            textInput.style.backgroundColor = 'blue';
+            h2Element.style.backgroundColor = 'blue';
+            iqenrgpiouqweprgon.style.backgroundColor = 'blue';
+
+            textInput.style.color = 'whitesmoke';
+            h2Element.style.color = 'whitesmoke';
+            iqenrgpiouqweprgon.style.color = 'whitesmoke';
+
+            textInput.style.fontWeight = 'bolder';
+            h2Element.style.fontWeight = 'bolder';
+            iqenrgpiouqweprgon.style.fontWeight = 'bolder';
+
+
+            textInput.classList.remove('borderTggl');
+            h2Element.classList.remove('borderTggl');
+            iqenrgpiouqweprgon.classList.remove('borderTggl');
+
+            textInput.value = "Trykket på knapp B";
+        }
+    </script>
+        </div>
+        <div class="footer">
+            <p style="float:left">Made by Kristian Roland</p>
+            <p style="float:right">Modul 1</p>
+        </div>
+    </div>
+</body>
+</html>

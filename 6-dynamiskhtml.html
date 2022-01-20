@@ -42,7 +42,9 @@
             
             <div id="resultat"></div>
             <div id="resultatHtml" style="font-family: monospace"></div>
+            <output id="totalSize"></output>
             <script>
+            
             var resultatDiv = document.getElementById('resultat');
             var resultatHtmlDiv = document.getElementById('resultatHtml');
             var sizeSlider = document.getElementById('sizeSlider');
@@ -51,6 +53,13 @@
             var borderColor = document.getElementById('borderColor');
             var borderWidth = document.getElementById('borderWidth');
             var borderRadius = document.getElementById('borderRadius');
+            var totalSizeVal = document.getElementById("sizeSlider").value;
+            
+            showValue();
+
+            function showValue() {
+                document.getElementById(totalSize).innerHTML = totalSizeVal;
+                }
 
             showDiv();
 
@@ -65,9 +74,11 @@
                     + 'border-radius: ' + borderRadius.value + '%' + ';'
                     + '">'
                     + '<div style="text-align:center;margin-top:45%;margin-bottom:45%;">' + textInput.value + '</div>';
-                resultatHtmlDiv.innerText = resultatDiv.innerHTML;
+                
+                    resultatHtmlDiv.innerText = resultatDiv.innerHTML;
             }
             </script>
+
         </div>
         <div class="footer">
             <p style="float:left">Made by Kristian Roland</p>
